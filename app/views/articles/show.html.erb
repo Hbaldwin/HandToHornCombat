@@ -1,0 +1,21 @@
+<p>
+  <h1><%= @article.title %></h1>
+</p>
+  <div class ="row">
+    <div class = "col-md-4 pull-right center">
+      <%= gravatar_for @article.user, size: 150 %>
+      <p>
+        <h5>Posted by <%= @article.user.username %></h5>
+      </p>
+    </div>
+    <div class="col-md-6 pull-right well center">
+      <h3><%= @article.summary %></h3>
+      <div>
+        <p>
+          <%= @article.content %>
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <h5><%= link_to "Return to all Articles", articles_path, class: "btn btn-warning btn-small" %></h5>
